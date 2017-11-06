@@ -7,12 +7,12 @@ using std::vector;
 
 template<typename InputIterator>
 InputIterator closest2mean(InputIterator first, InputIterator last) {
-	int avg = 0, count = 0;
+	int avg = 0, count = 1;
 	for (InputIterator it = first; it != last; it++) {
 		avg += *it;
 		count++;
 	}
-	avg /= 6;
+	avg /= count;
 	InputIterator result = first;
 	bool smaller = true;
 	while (smaller) {
