@@ -52,9 +52,6 @@ $(questao_3): $(OBJS_Q3)
 $(OBJ_DIR)/questao_3/main.o: $(SRC_DIR)/questao_3/main.cpp
 	$(CC) -c $(CPPFLAGS) -o $@ $<
 
-
-
-
 dir:
 	mkdir -p bin
 	mkdir -p build/questao_1
