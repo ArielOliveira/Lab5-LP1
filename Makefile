@@ -1,6 +1,6 @@
 questao_1 = ./bin/questao_1
 questao_2 = ./bin/questao_2
-questao_3 = ./bin/questao_3
+questao_3 = ./bin/showprimos
 
 BIN_DIR = ./bin
 OBJ_DIR = ./build
@@ -31,7 +31,7 @@ $(questao_1): CPPFLAGS += -I$(INC_DIR)/questao_1/
 $(questao_1): $(OBJS_Q1)
 	$(CC) $^ $(CPPFLAGS) -o $@
 
-$(OBJ_DIR)/questao_1/main.o: $(SRC_DIR)/questao_1/main.cpp
+$(OBJ_DIR)/questao_1/main.o: $(SRC_DIR)/questao_1/main_q1.cpp
 	$(CC) -c $(CPPFLAGS) -o $@ $<
 
 questao_2: $(questao_2)
@@ -40,7 +40,7 @@ $(questao_2): CPPFLAGS += -I$(INC_DIR)/questao_2/
 $(questao_2): $(OBJS_Q2)
 	$(CC) $^ $(CPPFLAGS) -o $@
 
-$(OBJ_DIR)/questao_2/main.o: $(SRC_DIR)/questao_2/main.cpp
+$(OBJ_DIR)/questao_2/main.o: $(SRC_DIR)/questao_2/main_q2.cpp
 	$(CC) -c $(CPPFLAGS) -o $@ $<
 
 questao_3: $(questao_3)
@@ -49,7 +49,7 @@ $(questao_3): CPPFLAGS += -I$(INC_DIR)/questao_3/
 $(questao_3): $(OBJS_Q3)
 	$(CC) $^ $(CPPFLAGS) -o $@
 
-$(OBJ_DIR)/questao_3/main.o: $(SRC_DIR)/questao_3/main.cpp
+$(OBJ_DIR)/questao_3/main.o: $(SRC_DIR)/questao_3/main_q3.cpp
 	$(CC) -c $(CPPFLAGS) -o $@ $<
 
 dir:
